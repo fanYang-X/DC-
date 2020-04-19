@@ -11,6 +11,7 @@
     删除非二值特征中的冗余特征（利用相关性，将强相关的特征进行剔除）;<br>
     
 ##Magic：
+    ![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png)
     观察上面的label分布图，呈现明显的双峰分布，猜测数据可能为两个物质的数据的拼接。针对这个问题，个人使用了两个方法进行处理：<br>
     根据label分布图，选择阈值，将label转换为0与1，利用lgb进行二分类训练；将得到的二分类的概率值作为特征加入到上述处理好的数据中，进行最终的回归预测；<br>
     根据label分布图，选择阈值，将label转换为0与1，利用lgb进行二分类训练，对test数据同样打上0，1标签。利用得到label为0与1的两个数据集，单独对每一个数据集进行回归预测；<br>
