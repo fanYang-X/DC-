@@ -15,7 +15,7 @@ DC小分子性质预测竞赛rank4方案
     
 Magic：
 ------
-    ![Image text](https://github.com/fanYang-X/DC-/blob/master/label_%E5%88%86%E5%B8%83.png)
+![Image text](https://github.com/fanYang-X/DC-/blob/master/label_%E5%88%86%E5%B8%83.png)
     观察上面的label分布图，呈现明显的双峰分布，猜测数据可能为两个物质的数据的拼接。针对这个问题，个人使用了两个方法进行处理：<br>
     根据label分布图，选择阈值，将label转换为0与1，利用lgb进行二分类训练；将得到的二分类的概率值作为特征加入到上述处理好的数据中，进行最终的回归预测；<br>
     根据label分布图，选择阈值，将label转换为0与1，利用lgb进行二分类训练，对test数据同样打上0，1标签。利用得到label为0与1的两个数据集，单独对每一个数据集进行回归预测；<br>
